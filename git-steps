@@ -10,5 +10,5 @@ git commit -m "A mensagem"
 git push origin master
 
 # CHAVES SSH
-ssh-keygen -t rsa -C "otaviomirandabr19@gmail.com"
+ssh-keygen -t rsa -C "leandroribeiro.sa1997@gmail.com"
 cat ~/.ssh/id_rsa.pub
