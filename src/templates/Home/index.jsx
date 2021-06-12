@@ -21,8 +21,8 @@ export const Home = () => {
     : posts;
 
   useEffect(() => {
-    handleLoadPosts();
-  });
+    handleLoadPosts(0, postsPerPage);
+  }, []);
 
   const handleLoadPosts = async () => {
     const photosAndPosts = await loadPosts();
@@ -51,9 +51,9 @@ export const Home = () => {
         <TextInput searchValue={searchValue} handleChange={handleChange} />
       </div>
 
-      {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
+      {filteredPosts.length > 0 && (<Posts posts={filteredPosts} />)}
       {filteredPosts.length === 0 && (
-        <p>Nothing was found in our database :(</p>
+        <p>Nothing was found in our database.</p>
       )}
 
       <div className="button-container">
