@@ -21,7 +21,8 @@ export const Home = () => {
     : posts;
 
   useEffect(() => {
-    handleLoadPosts(0, postsPerPage);
+    handleLoadPosts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleLoadPosts = async () => {
